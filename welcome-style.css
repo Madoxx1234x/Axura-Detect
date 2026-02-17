@@ -1,0 +1,75 @@
+:root {
+  --bg-main: #0B0F1A;
+  --bg-card: #121826;
+  --accent: #6AE3FF;
+  --accent-soft: #6AE3FF22;
+  --text-main: #E5E7EB;
+  --text-muted: #9CA3AF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* WELCOME CARD */
+.welcome-card {
+  background: var(--bg-card);
+  padding: 60px 40px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  max-width: 500px;
+  width: 90%;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* HEADLINE */
+.welcome-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+/* SUBTEXT */
+.welcome-card p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* START BUTTON */
+.start-btn {
+  background: var(--accent);
+  color: #0B0F1A;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(106, 227, 255, 0.3);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

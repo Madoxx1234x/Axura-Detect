@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Disaster Detector</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Axura Detect</h1>
+    </header>
+
+    <main class="container">
+      <!-- ROBOT CARD -->
+      <section class="robot-card">
+        <div class="robot-card">
+          <div class="robot">
+            <div class="robot-screen" id="screen">=]</div>
+          </div>
+        </div>
+        <h3>================</h3>
+        <p class="robot-text" id="robotText">
+          What would you like to detect today?
+        </p>
+      </section>
+
+      <!-- DISASTER OPTIONS -->
+      <section class="grid" id="options">
+        <div class="card" onclick="selectDisaster('wildfire')">
+          <h3>Wildfire</h3>
+        </div>
+        <div class="card" onclick="selectDisaster('tornado')">
+          <h3>Tornado</h3>
+        </div>
+        <div class="card" onclick="selectDisaster('flood')">
+          <h3>Flash Flood</h3>
+        </div>
+        <div class="card" onclick="selectDisaster('earthquake')">
+          <h3>Earthquake</h3>
+        </div>
+      </section>
+
+      <!-- INPUT FORM -->
+      <section class="form" id="form"></section>
+
+      <!-- HISTORY -->
+      <section class="history">
+        <h2>Recent Checks</h2>
+        <ul id="historyList"></ul>
+        <section class="history">
+        <button onclick="clearHistory()">Clear History</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
