@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: Axura-Detect-Backend
+    env: python
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    # Optional: set an environment variable or other settings in the Render dashboard if needed
+    envVars:
+      - key: PORT
+        value: 10000
