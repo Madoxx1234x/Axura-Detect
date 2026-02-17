@@ -23,6 +23,7 @@ const BASE = "https://your-render-url.onrender.com";
 ```
 
 Notes and recommendations
+
 - `requirements.txt` includes `tensorflow`, which is large and may cause slow builds or failures on free plans. Consider:
   - Training models offline, saving weights (.h5), and loading them at runtime instead of `model.fit()` on import.
   - Replacing TensorFlow models with lightweight scikit-learn models for faster deploys.
@@ -37,17 +38,20 @@ python -m venv venv
 venv\Scripts\activate    # Windows
 # or `source venv/bin/activate` on macOS/Linux
 ```
+
 2. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
+
 3. Run the backend locally:
 
 ```bash
 set PORT=5000
 python app.py
 ```
+
 4. Test an endpoint:
 
 ```bash
@@ -62,6 +66,7 @@ docker run -p 5000:5000 axura-detect
 ```
 
 If you want, I can:
+
 - Walk through creating the Render service and confirm settings, or
 - Deploy a Docker image to Render, or
 - Replace TensorFlow training-on-import with saved model loads to speed deployment.
