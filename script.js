@@ -8,6 +8,9 @@ if (!localStorage.getItem("visited")) {
 // -----------------------------
 // Deep Learning Required Fields
 // -----------------------------
+// API base URL. Set `window.BACKEND_URL` in the page to override.
+const BASE = window.BACKEND_URL || "http://127.0.0.1:5000";
+
 const fields = {
   wildfire: ["temperature", "humidity", "wind_speed", "forest_size"],
   tornado: ["wind_shear", "pressure", "temp_gradient"],
@@ -78,7 +81,7 @@ async function analyze(type) {
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
   try {
-    const res = await fetch(`http://127.0.0.1:5000/predict/${type}`, {
+    const res = await fetch(`${BASE}/predict/${type}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
